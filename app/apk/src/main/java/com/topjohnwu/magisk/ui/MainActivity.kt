@@ -3,8 +3,10 @@ package com.topjohnwu.magisk.ui
 import android.Manifest
 import android.Manifest.permission.REQUEST_INSTALL_PACKAGES
 import android.annotation.SuppressLint
+import android.content.Context
 import android.content.Intent
 import android.content.pm.ApplicationInfo
+import android.content.res.Configuration
 import android.os.Bundle
 import android.view.MenuItem
 import android.view.View
@@ -40,6 +42,7 @@ import kotlinx.coroutines.launch
 import java.io.File
 import com.topjohnwu.magisk.core.R as CoreR
 
+
 class MainViewModel : BaseViewModel()
 
 class MainActivity : NavigationActivity<ActivityMainMd2Binding>(), SplashScreenHost {
@@ -64,6 +67,15 @@ class MainActivity : NavigationActivity<ActivityMainMd2Binding>(), SplashScreenH
         }
 
     private var isRootFragment = true
+
+    override fun attachBaseContext(newBase: Context) {
+        var context = newBase
+        val density = 1.5f
+        val config: Configuration = context.resources.configuration
+        config.densityDpi = (160 * density).toInt()
+        context = context.createConfigurationContext(config)
+        super.attachBaseContext(context)
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         setTheme(Theme.selected.themeRes)
