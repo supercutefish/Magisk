@@ -61,19 +61,20 @@
 
                     <TextView
                         android:id="@+id/home_notice_content"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
+                        android:layout_width="110dp"
+                        android:layout_height="115dp"
                         android:padding="@dimen/l1"
                         android:text="@string/home_notice_content"
                         android:textAppearance="@style/AppearanceFoundation.Caption.OnPrimary"
                         app:layout_constraintEnd_toStartOf="@+id/home_notice_hide"
+                        app:layout_constraintHorizontal_bias="0.076"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <Button
                         android:id="@+id/home_notice_hide"
                         style="@style/WidgetFoundation.Button.Text.OnPrimary"
-                        android:layout_width="wrap_content"
+                        android:layout_width="30dp"
                         android:layout_height="wrap_content"
                         android:onClick="@{() -> viewModel.hideNotice()}"
                         android:text="@string/hide"

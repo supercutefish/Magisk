@@ -13,7 +13,7 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="220dp"
         tools:layout_width="match_parent">
 
         <androidx.constraintlayout.widget.Guideline
@@ -21,19 +21,21 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            app:layout_constraintGuide_begin="16dp" />
+            app:layout_constraintGuide_begin="8dp" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/dialog_base_end"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            app:layout_constraintGuide_end="16dp" />
+            app:layout_constraintGuide_end="8dp" />
 
         <ImageView
             android:id="@+id/dialog_base_icon"
             style="@style/WidgetFoundation.Image.Big"
             gone="@{data.icon == null}"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
             android:layout_gravity="center"
             android:layout_marginTop="@dimen/l1"
             android:src="@{data.icon}"
@@ -47,8 +49,8 @@
             android:id="@+id/dialog_base_title"
             gone="@{data.title.length == 0}"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/l1"
+            android:layout_height="25dp"
+            android:layout_marginTop="4dp"
             android:gravity="center"
             android:text="@{data.title}"
             android:textAppearance="@style/AppearanceFoundation.Title"
@@ -87,7 +89,7 @@
                     android:id="@+id/dialog_base_container"
                     gone="@{data.message.length != 0}"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="85dp" />
 
             </FrameLayout>
 
@@ -121,8 +123,8 @@
                 style="@style/WidgetFoundation.Button.Text"
                 gone="@{data.buttonNeutral.gone}"
                 isEnabled="@{data.buttonNeutral.isEnabled}"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="55dp"
+                android:layout_height="35dp"
                 android:layout_gravity="center_horizontal"
                 android:clickable="@{data.buttonNeutral.isEnabled}"
                 android:focusable="@{data.buttonNeutral.isEnabled}"
@@ -145,8 +147,8 @@
                 style="@style/WidgetFoundation.Button.Text"
                 gone="@{data.buttonNegative.gone}"
                 isEnabled="@{data.buttonNegative.isEnabled}"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="55dp"
+                android:layout_height="35dp"
                 android:layout_gravity="center_horizontal"
                 android:clickable="@{data.buttonNegative.isEnabled}"
                 android:focusable="@{data.buttonNegative.isEnabled}"
@@ -161,8 +163,8 @@
                 style="@style/WidgetFoundation.Button.Text"
                 gone="@{data.buttonPositive.gone}"
                 isEnabled="@{data.buttonPositive.isEnabled}"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="55dp"
+                android:layout_height="35dp"
                 android:layout_gravity="center_horizontal"
                 android:clickable="@{data.buttonPositive.isEnabled}"
                 android:focusable="@{data.buttonPositive.isEnabled}"

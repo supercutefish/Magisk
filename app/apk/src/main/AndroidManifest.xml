@@ -3,9 +3,14 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <application android:localeConfig="@xml/locale_config">
+        <meta-data
+            android:name="com.google.android.wearable.standalone"
+            android:value="true" />
+
         <activity
             android:name=".ui.MainActivity"
             android:exported="true"
+            android:taskAffinity="com.topjohnwu.magisk"
             android:theme="@style/SplashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -30,4 +35,7 @@
         </activity>
     </application>
 
+    <uses-feature
+        android:required="true"
+        android:name="android.hardware.type.watch" />
 </manifest>

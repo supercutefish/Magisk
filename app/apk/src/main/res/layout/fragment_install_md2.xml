@@ -51,12 +51,6 @@
                         android:layout_height="wrap_content"
                         android:orientation="horizontal">
 
-                        <ImageView
-                            style="@style/WidgetFoundation.Icon"
-                            isSelected="@{viewModel.step > 0}"
-                            android:layout_marginStart="@dimen/l_25"
-                            app:srcCompat="@drawable/ic_check_circle_md2" />
-
                         <TextView
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
